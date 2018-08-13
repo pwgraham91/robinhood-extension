@@ -1,8 +1,6 @@
-console.log('this is the thing')
 setTimeout(function(){
     setHeader();
     setData();
-
 }, 5000);
 
 function getHeaders() {
@@ -25,7 +23,6 @@ function setData() {
         row.innerHTML = `${row.innerHTML.slice(0, row.innerHTML.length- 5)}${row.children[row.children.length -1].outerHTML}</tr>`;
 
         document.querySelectorAll(`table.table tbody tr:nth-child(${i + 1}) td:last-child`)[0].textContent = `${getPercentReturn(i)}%`
-
     }
 }
 
